@@ -1,0 +1,40 @@
+in .lex ----
+1. functions as tokens
+
+in .y -----
+%start program
+%token READ WRITE END ASSIGNOP // what are read write end doing
+%token <id> ID
+%token <val> FUNC // not sure the ramifications of <val> whats going on here? meaning of the stuff inside the <>?
+
+how to finish up grammar, it's kinda tricky if we have functions as tokens
+
+| READ ID               { readSymbolValue($2); } // what do these two lines do
+| WRITE ID              { writeSymbolValue($2); } // ?
+
+in evalexpr.h ----
+how to modify this file? change gencode/operate functions
+
+
+
+
+
+grammar* - gencode* - new typedef enum - func1-3 - prog.h new typedef enum - printprogram
+
+probably compilecpp next
+
+
+
+---
+
+
+in the compile function, what is %s doing and what is program[i].data doing/how is it working with other stuff
+- how do we get the program[i].data (the url stirng) to print out in the compile function - i think with %s
+
+**FILE cpp - what is this
+
+
+expr.tab.c? need to do anything in here or no?\
+
+
+whats going on with my perl module
